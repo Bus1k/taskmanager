@@ -26,6 +26,11 @@ class Task
      */
     private $status;
 
+    /**
+     * @ORM\Column(type="datetime", name="add_date")
+     */
+    private $addDate;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -51,6 +56,18 @@ class Task
     public function setStatus(?bool $status): self
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getDate()
+    {
+        return $this->addDate;
+    }
+
+    public function setDate()
+    {
+        $this->addDate = new \DateTime("now");
 
         return $this;
     }
