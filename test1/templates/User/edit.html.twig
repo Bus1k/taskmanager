@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EDIT!{% endblock %}
+
+{% block content %}
+    <h1>EDIT USER ACCOUNT</h1>
+
+    {{ form_start(editUserForm) }}
+        {{ form_widget(editUserForm) }}
+
+
+    <button type="submit">SAVE</button>
+    <a href="{{path('to_do_list')}}">CANCEL</a>
+    {{ form_end(editUserForm) }}
+
+
+
+
+{% endblock %}

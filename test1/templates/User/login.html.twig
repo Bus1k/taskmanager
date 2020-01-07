@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+
+{% block content %}
+
+    {% for type, messages in app.session.flashbag.all() %}
+        {% for message in messages %}
+            <div class="alert alert-{{type}}">{{message}}</div>
+        {% endfor %}
+    {% endfor %}
+
+
+    {% if errors %}
+        {{ errors.messageKey }}
+    {% endif %}
+
+    <form action="{{ path('login') }}" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="_username" value="{{ username }}">
+        <label for="password">Password:</label>
+        <input type="password" name="_password">
+
+        <button type="submit">Login</button>
+
+
+    </form>
+{% endblock %}

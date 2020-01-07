@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Edit task title</h1>
+
+    {{ form_start(taskForm) }}
+        {{ form_widget(taskForm) }}
+
+    <button type="submit">SAVE</button>
+    <a href="{{path('to_do_list')}}">CANCEL</a>
+    {{ form_end(taskForm) }}
+{% endblock %}
