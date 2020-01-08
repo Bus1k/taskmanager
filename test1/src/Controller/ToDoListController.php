@@ -17,11 +17,16 @@ class ToDoListController extends AbstractController
      */
     public function index()
     {
-        $id = $this->getUser()->getId();
-        $user = $this->getUser($id);
-        $tasks = $this->getDoctrine()->getRepository(Task::class)->findBy(['user' => $id]);
+        if(!empty($this->getUser()))
+        {
+            $id = $this->getUser()->getId();
+            $user = $this->getUser($id);
+            $tasks = $this->getDoctrine()->getRepository(Task::class)->findBy(['user' => $id]);
 
-        return $this->render('Task/index.html.twig', ['tasks' => $tasks, 'user' => $user]);
+            return $this->render('Task/index.html.twig', ['tasks' => $tasks, 'user' => $user]);
+        }
+
+        return $this->redirectToRoute('login');
     }
 
 
@@ -45,6 +50,7 @@ class ToDoListController extends AbstractController
         $task = new Task();
         $task->setTitle($title);
         $task->setaddDate();
+        $task->setUser($this->getUser());
 
         //prepare task to add
         $entityManager->persist($task);
