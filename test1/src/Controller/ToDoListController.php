@@ -4,7 +4,6 @@ namespace App\Controller;
 
 
 use App\Entity\Task;
-use App\Entity\User;
 use App\Forms\TaskFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -22,7 +21,7 @@ class ToDoListController extends AbstractController
         $user = $this->getUser($id);
         $tasks = $this->getDoctrine()->getRepository(Task::class)->findBy(['user' => $id]);
 
-        return $this->render('index.html.twig', ['tasks' => $tasks, 'user' => $user]);
+        return $this->render('Task/index.html.twig', ['tasks' => $tasks, 'user' => $user]);
     }
 
 
@@ -78,7 +77,7 @@ class ToDoListController extends AbstractController
      * @Route("/edit/{id}", name="edit_task")
      * @param Request $request
      * @param Task $task
-     * @return RedirectResponse
+     * @return RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
     public function editTitle(Request $request, Task $task)
     {
@@ -94,7 +93,7 @@ class ToDoListController extends AbstractController
         }
 
 
-        return $this->render('edit.html.twig', [
+        return $this->render('Task/edit.html.twig', [
             'taskForm' => $form->createView(),
         ]);
     }

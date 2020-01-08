@@ -4,7 +4,8 @@
     <list default="true" id="c4c2ef28-2981-44f9-8a04-3cc986ecde24" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test1/src/Controller/ToDoListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/test1/src/Controller/ToDoListController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/test1/templates/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1/templates/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/test1/templates/Task/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/test1/templates/Task/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +142,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\zad41old\test1\templates\Task" />
+    </key>
+  </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -163,7 +169,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578432066049</updated>
-      <workItem from="1578432068178" duration="15224000" />
+      <workItem from="1578432068178" duration="15745000" />
     </task>
     <servers />
   </component>
