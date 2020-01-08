@@ -14,7 +14,11 @@ class UserEditFormType extends AbstractType
     {
         $builder
             ->add('username', TextType::class)
-            ->add('password', TextType::class, ['label' => 'New Password']);
+            ->add('password', RepeatedType::class, [
+                'type' => PasswordType::class,
+                'first_options' => ['label' => 'Password'],
+                'second_options' => ['label' => 'Repeat password']
+                ]);
     }
 
 }

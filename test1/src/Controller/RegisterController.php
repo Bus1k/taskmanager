@@ -89,6 +89,8 @@ class RegisterController extends AbstractController
         if($form->isSubmitted() && $form->isValid())
         {
             $entityManager = $this->getDoctrine()->getManager();
+            $password = $passwordEncoder->encodePassword($user, $form->get('password')->getData());
+            $user->setPassword($password);
             $entityManager->flush();
 
             return $this->redirectToRoute('to_do_list');

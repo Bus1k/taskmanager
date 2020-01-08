@@ -10,7 +10,7 @@
 
 {% block content %}
     <div class="header">
-        <h2>TASKI USERA: {{ user.username }} <a href="{{ path('logout') }}">(WYLOGUJ)</a></h2>
+        <h2>TASKI USERA: <a href="{{ path('edit_user', {'id' : user.id}) }}">{{ user.username }}</a><a href="{{ path('logout') }}">(WYLOGUJ)</a></h2>
         <form method="POST" action="{{ path('create_task') }}">
             <input name="taskTitle" type="text" id="myInput" placeholder="Task title..." />
             <button type="submit" class="addBtn">Add a task</button>
