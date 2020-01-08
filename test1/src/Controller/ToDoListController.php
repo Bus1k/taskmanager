@@ -18,11 +18,11 @@ class ToDoListController extends AbstractController
      */
     public function index()
     {
-        //findBy mogę posortować po wybranej kolumnie np po id4
-        $tasks = $this->getDoctrine()->getRepository(Task::class)->findBy([], ['id' => 'ASC']);
-        $users = $this->getDoctrine()->getRepository(User::class)->findAll();
+        $id = $this->getUser()->getId();
+        $tasks = $this->getDoctrine()->getRepository(Task::class)->findBy(['user' => $id]);
 
-        return $this->render('index.html.twig', ['tasks' => $tasks, 'users' => $users]);
+        //var_dump($tasks);
+        return $this->render('index.html.twig', ['tasks' => $tasks]);
     }
 
 

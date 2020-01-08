@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c4c2ef28-2981-44f9-8a04-3cc986ecde24" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/test1/public/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test1/src/Controller/ToDoListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/test1/src/Controller/ToDoListController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/src/DataFixtures/AppFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/src/Entity/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/test1/src/Entity/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/test1/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/src/Forms/TaskFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/test1/src/Forms/TaskFormType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test1/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/test1/templates/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +163,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578432066049</updated>
-      <workItem from="1578432068178" duration="12487000" />
+      <workItem from="1578432068178" duration="14183000" />
     </task>
     <servers />
   </component>
