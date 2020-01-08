@@ -22,7 +22,6 @@ class ToDoListController extends AbstractController
         $tasks = $this->getDoctrine()->getRepository(Task::class)->findBy([], ['id' => 'ASC']);
         $users = $this->getDoctrine()->getRepository(User::class)->findAll();
 
-        var_dump($tasks);
         return $this->render('index.html.twig', ['tasks' => $tasks, 'users' => $users]);
     }
 
@@ -46,7 +45,7 @@ class ToDoListController extends AbstractController
 
         $task = new Task();
         $task->setTitle($title);
-        $task->setDate();
+        $task->setaddDate();
 
         //prepare task to add
         $entityManager->persist($task);

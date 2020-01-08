@@ -20,7 +20,7 @@
     <ul>
         {% for task in tasks %}
             <li {% if task.status %} class="checked" {% endif %}>
-                <a href="{{path('update_task', {'id' : task.id})}}"><span class="task-list-item">{{ task.id }} : {{ task.title }} {{ task.addDate }}</span></a>
+                <a href="{{path('update_task', {'id' : task.id})}}"><span class="task-list-item">{{ task.id }} : {{ task.title }} --> {{ task.addDate.format('Y-m-d H:i:s') }}</span></a>
                 <a href="{{path('edit_task', {'id' : task.id})}}"><span class="edit"><i class="fas fa-edit"></i></span></a>
                 <a onclick="return confirm('Are you sure to delete?')" href="{{path('delete_task', {'id' : task.id})}}"><span class="close"><i class="fas fa-trash-alt"></i></span></a>
             </li>

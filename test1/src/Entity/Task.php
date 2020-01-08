@@ -31,6 +31,13 @@ class Task
      */
     private $addDate;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="tasks")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -60,15 +67,28 @@ class Task
         return $this;
     }
 
-    public function getDate()
+    public function getaddDate()
     {
         return $this->addDate;
     }
 
-    public function setDate()
+    public function setaddDate(): self
     {
         $this->addDate = new \DateTime("now");
 
         return $this;
     }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+    
 }
