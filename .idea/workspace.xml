@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c2ef28-2981-44f9-8a04-3cc986ecde24" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test1/public/css/navbar_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test1/templates/_navbar.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/test1/config/packages/framework.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test1/public/css/login_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/test1/public/css/login_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/test1/public/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1/src/Controller/ToDoListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/test1/src/Controller/ToDoListController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test1/templates/Task/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/test1/templates/Task/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/templates/User/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/test1/templates/User/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/templates/User/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/test1/templates/User/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test1/templates/User/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/test1/templates/User/register.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test1/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/test1/templates/base.html.twig" afterDir="false" />
     </list>
@@ -155,6 +158,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\zad41old\test1\templates" />
+      <recent name="D:\projects\zad41old\test1\templates\User" />
       <recent name="D:\projects\zad41old\test1\templates\Task" />
     </key>
   </component>
@@ -181,7 +186,7 @@
       <option name="presentableId" value="Default" />
       <updated>1578432066049</updated>
       <workItem from="1578432068178" duration="18571000" />
-      <workItem from="1578744658185" duration="5283000" />
+      <workItem from="1578744658185" duration="24484000" />
     </task>
     <servers />
   </component>
@@ -202,6 +207,10 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="601" y="183" key="#Options/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1578432272580" />
+    <state x="527" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578750201577">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="527" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1578750201577" />
     <state x="789" y="279" key="FileChooserDialogImpl" timestamp="1578432352319">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>

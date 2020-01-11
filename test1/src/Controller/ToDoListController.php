@@ -2,13 +2,13 @@
 
 namespace App\Controller;
 
-
 use App\Entity\Task;
 use App\Forms\TaskFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+
 
 class ToDoListController extends AbstractController
 {
@@ -27,6 +27,22 @@ class ToDoListController extends AbstractController
         }
 
         return $this->redirectToRoute('login');
+    }
+
+    /**
+     * Return data for partial view _navbar
+     */
+    public function navbar()
+    {
+        if(!empty($this->getUser()))
+        {
+            $id = $this->getUser()->getId();
+            $user = $this->getUser($id);
+
+            return $this->render('_navbar.html.twig', ['user' => $user]);
+        }
+
+        return $this->render('_navbar.html.twig');
     }
 
 
