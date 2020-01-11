@@ -1,19 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}EDIT!{% endblock %}
+{% block title %}
+    <title>Edit Account</title>
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="../css/login_style.css">
+{% endblock %}
 
 {% block content %}
-    <h1>EDIT USER ACCOUNT</h1>
+    <div class="container login-container">
+        <div class="row">
+            <div class="col-md-6 login-form-2 form">
+                <h3>Edit Account Data</h3>
 
-    {{ form_start(editUserForm) }}
-        {{ form_widget(editUserForm) }}
-
-
-    <button type="submit">SAVE</button>
-    <a href="{{path('to_do_list')}}">CANCEL</a>
-    {{ form_end(editUserForm) }}
+                {{ form_start(editUserForm, {'attr': {'class': 'form-group form'}}) }}
 
 
+                <div class="form-group">
+                    {{ form_widget(editUserForm.username, {'attr': {'class': 'form-control', 'placeholder': 'Username'}}) }}
+                </div>
 
+                <div class="form-group">
+                    {{ form_widget(editUserForm.password.first, {'attr': {'class': 'form-control', 'placeholder': 'Password'}}) }}
+                </div>
 
+                <div class="form-group">
+                    {{ form_widget(editUserForm.password.second, {'attr': {'class': 'form-control', 'placeholder': 'Repeat password'}}) }}
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" value="Save Changes" />
+                </div>
+                <div class="form-group">
+                    <a href="{{ path('to_do_list') }}" class="ForgetPwd" value="Login">Cancel</a>
+                </div>
+                {{ form_end(editUserForm) }}
+            </div>
+        </div>
+    </div>
 {% endblock %}
+

@@ -1,20 +1,45 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello RegisterController!{% endblock %}
+{% block title %}
+    <title>Register</title>
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="./css/login_style.css">
+{% endblock %}
 
 {% block content %}
-    <h1>CREATE NEW ACCOUNT</h1>
+    <div class="container login-container">
+        <div class="row">
+            <div class="col-md-6 login-form-2 form">
+                <h3>Create New Account</h3>
 
-    {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
-    {{ form_label(form.username) }}
-    {{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}
-    {{ form_label(form.password.first) }}
-    {{ form_widget(form.password.first, {'attr': {'class': 'form-control'}}) }}
-    {{ form_label(form.password.second) }}
-    {{ form_widget(form.password.second, {'attr': {'class': 'form-control'}}) }}
+                {{ form_start(form, {'attr': {'class': 'form-group form'}}) }}
 
-    <input type="submit" value="CREATE">
-    {{ form_end(form) }}
+                <div class="form-group">
+                {{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder': 'Username'}}) }}
+                </div>
 
-    <a href="{{ path('login') }}">GO BACK</a>
+                <div class="form-group">
+                {{ form_widget(form.password.first, {'attr': {'class': 'form-control', 'placeholder': 'Password'}}) }}
+                </div>
+
+                <div class="form-group">
+                {{ form_widget(form.password.second, {'attr': {'class': 'form-control', 'placeholder': 'Repeat password'}}) }}
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" value="Create" />
+                </div>
+                <div class="form-group">
+                    <a href="{{ path('login') }}" class="ForgetPwd" value="Login">Cancel</a>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
+
+
+

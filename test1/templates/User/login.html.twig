@@ -7,12 +7,6 @@
 
 {% block content %}
 
-    {% for type, messages in app.session.flashbag.all() %}
-        {% for message in messages %}
-            <div class="alert alert-{{type}}">{{message}}</div>
-        {% endfor %}
-    {% endfor %}
-
         <div class="container login-container">
             <div class="row">
                 <div class="col-md-6 login-form-2">
@@ -39,4 +33,5 @@
                 </div>
             </div>
         </div>
+
 {% endblock %}
