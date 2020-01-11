@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% block head %}
+    <link rel="stylesheet" href="./css/login_style.css">
+{% endblock %}
+
 
 {% block content %}
 
@@ -9,19 +13,30 @@
         {% endfor %}
     {% endfor %}
 
+        <div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-2">
+                    <h3>Login</h3>
 
-    {% if errors %}
-        {{ errors.messageKey }}
-    {% endif %}
+                    {% if errors %}
+                    <div class="alert alert-danger" role="alert">{{ errors.messageKey }}</div>
+                    {% endif %}
 
-    <form action="{{ path('login') }}" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" name="_username" value="{{ username }}">
-        <label for="password">Password:</label>
-        <input type="password" name="_password">
-
-        <button type="submit">Login</button>
-    </form>
-
-    <a href="{{ path('register') }}">REGISTER NEW USER</a>
+                    <form action="{{ path('login') }}" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="User Name" name="_username" value="{{ username }}" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password" name="_password" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Login" />
+                        </div>
+                        <div class="form-group">
+                            <a href="{{ path('register') }}" class="ForgetPwd" value="Login">Register user</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 {% endblock %}
