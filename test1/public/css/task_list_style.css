@@ -21,3 +21,7 @@
 .active:hover{
     text-decoration: line-through;
 }
+
+.container{
+    display: flex;
+}

@@ -26,7 +26,11 @@
                             <li class="list-group">
                             {% for subtask in subtasks %}
                                 {% if task.id == subtask.mainTask.id %}
-                                        <a href="{{path('edit_subtask', {'id' : subtask.id})}}" class="list-group-item list-group-item-action list-group-item-info subtask">{{ subtask.subTitle }}</a>
+                                    <div class="container">
+                                        <a href="{{path('edit_task', {'id' : task.id})}}" data-toggle="tooltip" title="Edit"><span class="icon delete"><i class="fas fa-minus"></i></span></a>
+                                        <a href="{{path('edit_subtask', {'id' : subtask.id})}}" class="list-group-item list-group-item-action list-group-item-info subtask"><i class="fas fa-thumbtack"></i> {{ subtask.subTitle }}</a>
+
+                                    </div>
                                 {% endif %}
                             {% endfor %}
                             </li>
