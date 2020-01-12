@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c2ef28-2981-44f9-8a04-3cc986ecde24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test1/public/css/navbar_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test1/templates/_navbar.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/test1/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/public/css/login_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/test1/public/css/login_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/test1/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/src/Controller/ToDoListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/test1/src/Controller/ToDoListController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1/public/css/task_list_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/test1/public/css/task_list_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test1/templates/Task/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/test1/templates/Task/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/templates/User/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/test1/templates/User/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/test1/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,6 +212,10 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="781" y="163" key="SettingsEditor/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1578435227373" />
+    <state x="-1244" y="0" width="1243" height="1024" key="dock-window-1" timestamp="1578781953825">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1244" y="0" width="1243" height="1024" key="dock-window-1/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1578781953825" />
     <state x="852" y="255" key="ftp.server.browser" timestamp="1578432781202">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>

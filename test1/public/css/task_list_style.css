@@ -1,0 +1,23 @@
+.card{
+    max-width: 800px;
+}
+
+.icon{
+    font-size: 25px;
+    padding: 10px;
+}
+
+.icon.delete:hover{
+    color: red;
+}
+
+.icon.edit:hover{
+    color: green;
+}
+
+.active{
+    text-decoration: line-through;
+}
+.active:hover{
+    text-decoration: line-through;
+}
