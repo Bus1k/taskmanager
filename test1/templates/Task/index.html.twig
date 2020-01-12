@@ -5,26 +5,35 @@
 {% endblock %}
 
 {% block head %}
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://kit.fontawesome.com/18fc697799.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/task_list_style.css">
 {% endblock %}
 
 
 {% block content %}
-    <div class="header">
-        <form method="POST" action="{{ path('create_task') }}">
-            <input name="taskTitle" type="text" id="myInput" placeholder="Task title..." />
-            <button type="submit" class="addBtn">Add a task</button>
-        </form>
+    <div class="card">
+        <div class="card-header">
+            <i class="fa fa-tasks">Task List</i>
+        </div>
+        <div class="card-body">
+            <div class="list-group">
+                <ul class="list-group">
+                {% for task in tasks %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="{{path('update_task', {'id' : task.id})}}"{% if task.status %} class="list-group-item list-group-item-action active" {% endif %} class="list-group-item list-group-item-action">{{ task.title }}</a>
+                        <a href="{{path('edit_task', {'id' : task.id})}}" data-toggle="tooltip" title="Edit"><span class="icon edit"><i class="fas fa-edit"></i></span></a>
+                        <a onclick="return confirm('Are you sure to delete?')" href="{{path('delete_task', {'id' : task.id})}}" data-toggle="tooltip" title="Delete"><span class="icon delete"><i class="fas fa-trash-alt"></i></span></a>
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+            <div class="d-block text-right card-footer">
+                <div class="form-inline">
+                    <form method="POST" action="{{ path('create_task') }}">
+                        <input name="taskTitle" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Task Title...">
+                        <button type="submit" class="btn btn-primary">Add Task</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <ul>
-        {% for task in tasks %}
-            <li {% if task.status %} class="checked" {% endif %}>
-                <a href="{{path('update_task', {'id' : task.id})}}"><span class="task-list-item">{{ task.id }} : {{ task.title }} --> {{ task.addDate.format('Y-m-d H:i:s') }}</span></a>
-                <a href="{{path('edit_task', {'id' : task.id})}}"><span class="edit"><i class="fas fa-edit"></i></span></a>
-                <a onclick="return confirm('Are you sure to delete?')" href="{{path('delete_task', {'id' : task.id})}}"><span class="close"><i class="fas fa-trash-alt"></i></span></a>
-            </li>
-        {% endfor %}
-    </ul>
 {% endblock %}
