@@ -29,8 +29,10 @@
             <div class="d-block text-right card-footer">
                 <div class="form-inline">
                     <form method="POST" action="{{ path('create_task') }}">
-                        <input name="taskTitle" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Task Title...">
-                        <button type="submit" class="btn btn-primary">Add Task</button>
+                        <div class="input-group mb-3">
+                            <input name="taskTitle" type="text" class="form-control w-75 p-3" aria-label="Sizing example input" aria-describedby="button-addon2" placeholder="Task Title...">
+                            <button type="submit" class="btn btn-primary">Add Task</button>
+                        </div>
                     </form>
                 </div>
             </div>
