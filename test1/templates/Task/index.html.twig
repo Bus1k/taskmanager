@@ -19,15 +19,14 @@
                 <ul class="list-group">
                 {% for task in tasks %}
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-
                             <a href="{{path('update_task', {'id' : task.id})}}"{% if task.status %} class="list-group-item list-group-item-action active" {% endif %} class="list-group-item list-group-item-action">{{ task.title }}</a>
-                            <a href="{{path('edit_task', {'id' : task.id})}}" data-toggle="tooltip" title="Add subtask"><span class="icon edit"><i class="fas fa-plus"></i></span></a>
+                            <a href="{{path('add_subtask', {'id' : task.id})}}" data-toggle="tooltip" title="Add subtask"><span class="icon edit"><i class="fas fa-plus"></i></span></a>
                             <a href="{{path('edit_task', {'id' : task.id})}}" data-toggle="tooltip" title="Edit"><span class="icon edit"><i class="fas fa-edit"></i></span></a>
                             <a onclick="return confirm('Are you sure to delete?')" href="{{path('delete_task', {'id' : task.id})}}" data-toggle="tooltip" title="Delete"><span class="icon delete"><i class="fas fa-trash-alt"></i></span></a>
                             <li class="list-group">
                             {% for subtask in subtasks %}
                                 {% if task.id == subtask.mainTask.id %}
-                                    <a href="#" class="list-group-item list-group-item-action list-group-item-info">{{ subtask.subTitle }}</a>
+                                        <a href="{{path('edit_subtask', {'id' : subtask.id})}}" class="list-group-item list-group-item-action list-group-item-info subtask">{{ subtask.subTitle }}</a>
                                 {% endif %}
                             {% endfor %}
                             </li>

@@ -117,7 +117,6 @@ class TaskController extends AbstractController
             return $this->redirectToRoute('to_do_list');
         }
 
-
         return $this->render('Task/edit.html.twig', [
             'taskForm' => $form->createView(),
         ]);

@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    <title>Edit</title>
+    <title>Edit Subtask</title>
 {% endblock %}
 
 {% block head %}
@@ -12,23 +12,23 @@
     <div class="container login-container">
         <div class="row">
             <div class="col-md-6 login-form-2 form">
-                <h3>Edit task</h3>
+                <h3>Edit subtask</h3>
 
-                {{ form_start(taskForm, {'attr': {'class': 'form-group form'}}) }}
+                {{ form_start(subTaskForm, {'attr': {'class': 'form-group form'}}) }}
 
                 <div class="form-group">
-                    {{ form_label(taskForm.title, 'Title', {'label_attr': {'class': 'label'}}) }}
-                    {{ form_widget(taskForm.title, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_label(subTaskForm.subTitle, 'Title', {'label_attr': {'class': 'label'}}) }}
+                    {{ form_widget(subTaskForm.subTitle, {'attr': {'class': 'form-control'}}) }}
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" class="btnSubmit" value="Create" />
+                    <input type="submit" class="btnSubmit" value="Save" />
                 </div>
 
                 <div class="form-group">
                     <a href="{{ path('to_do_list') }}" class="ForgetPwd" value="Login">Cancel</a>
                 </div>
-                {{ form_end(taskForm) }}
+                {{ form_end(subTaskForm) }}
             </div>
         </div>
     </div>
