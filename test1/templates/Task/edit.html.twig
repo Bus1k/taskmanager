@@ -1,12 +1,35 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}
+    <title>Edit</title>
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="../css/login_style.css">
+{% endblock %}
+
 {% block content %}
-    <h1>Edit task title</h1>
+    <div class="container login-container">
+        <div class="row">
+            <div class="col-md-6 login-form-2 form">
+                <h3>Edit task title</h3>
 
-    {{ form_start(taskForm) }}
-        {{ form_widget(taskForm) }}
+                {{ form_start(taskForm, {'attr': {'class': 'form-group form'}}) }}
 
-    <button type="submit">SAVE</button>
-    <a href="{{path('to_do_list')}}">CANCEL</a>
-    {{ form_end(taskForm) }}
+                <div class="form-group">
+                    {{ form_label(taskForm.title, 'Title', {'label_attr': {'class': 'label'}}) }}
+                    {{ form_widget(taskForm.title, {'attr': {'class': 'form-control'}}) }}
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" value="Create" />
+                </div>
+
+                <div class="form-group">
+                    <a href="{{ path('login') }}" class="ForgetPwd" value="Login">Cancel</a>
+                </div>
+                {{ form_end(taskForm) }}
+            </div>
+        </div>
+    </div>
 {% endblock %}

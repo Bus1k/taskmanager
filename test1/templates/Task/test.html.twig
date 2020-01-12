@@ -1,30 +1,20 @@
-{% extends 'base.html.twig' %}
 
-{% block title %}
-    <title>Task Manager</title>
-{% endblock %}
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-6 login-form-2 form">
+            <h3>Create New Account</h3>
+            {{ form_start(taskForm, {'attr': {'class': 'form-group form'}}) }}
 
-{% block head %}
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://kit.fontawesome.com/18fc697799.js" crossorigin="anonymous"></script>
-{% endblock %}
-
-
-{% block content %}
-    <div class="header">
-        <form method="POST" action="{{ path('create_task') }}">
-            <input name="taskTitle" type="text" id="myInput" placeholder="Task title..." />
-            <button type="submit" class="addBtn">Add a task</button>
-        </form>
+            <div class="form-group">
+                {{ form_widget(taskForm.title) }}
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btnSubmit" value="Save" />
+            </div>
+            <div class="form-group">
+                <a href="{{path('to_do_list')}}" class="ForgetPwd">CANCEL</a>
+            </div>
+            {{ form_end(taskForm) }}
+        </div>
     </div>
-
-    <ul>
-        {% for task in tasks %}
-            <li {% if task.status %} class="checked" {% endif %}>
-                <a href="{{path('update_task', {'id' : task.id})}}"><span class="task-list-item">{{ task.id }} : {{ task.title }} --> {{ task.addDate.format('Y-m-d H:i:s') }}</span></a>
-                <a href="{{path('edit_task', {'id' : task.id})}}"><span class="edit"><i class="fas fa-edit"></i></span></a>
-                <a onclick="return confirm('Are you sure to delete?')" href="{{path('delete_task', {'id' : task.id})}}"><span class="close"><i class="fas fa-trash-alt"></i></span></a>
-            </li>
-        {% endfor %}
-    </ul>
-{% endblock %}
+</div>
