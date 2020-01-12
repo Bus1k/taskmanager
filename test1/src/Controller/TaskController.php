@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 
 
-class ToDoListController extends AbstractController
+class TaskController extends AbstractController
 {
     /**
      * @Route("/", name="to_do_list" )

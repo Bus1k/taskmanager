@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -36,6 +38,17 @@ class Task
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Subtask", mappedBy="mainTask")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $subtasks;
+
+    public function __construct()
+    {
+        $this->subtasks = new ArrayCollection();
+    }
 
 
     public function getId(): ?int
@@ -87,6 +100,37 @@ class Task
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Subtask[]
+     */
+    public function getSubtasks(): Collection
+    {
+        return $this->subtasks;
+    }
+
+    public function addSubtask(Subtask $subtask): self
+    {
+        if (!$this->subtasks->contains($subtask)) {
+            $this->subtasks[] = $subtask;
+            $subtask->setMainTask($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSubtask(Subtask $subtask): self
+    {
+        if ($this->subtasks->contains($subtask)) {
+            $this->subtasks->removeElement($subtask);
+            // set the owning side to null (unless already changed)
+            if ($subtask->getMainTask() === $this) {
+                $subtask->setMainTask(null);
+            }
+        }
 
         return $this;
     }

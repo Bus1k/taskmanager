@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c2ef28-2981-44f9-8a04-3cc986ecde24" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test1/src/Entity/Subtask.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/src/Controller/ToDoListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/test1/src/Controller/ToDoListController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/templates/Task/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/test1/templates/Task/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1/src/Controller/ToDoListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/test1/src/Controller/TaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1/src/Entity/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/test1/src/Entity/Task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1/src/Migrations/Version20200108183113.php" beforeDir="false" afterPath="$PROJECT_DIR$/test1/src/Migrations/Version20200112041326.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/test1/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,13 +134,16 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1W5GVXhlqUjNbR7SgV5sxjnduzc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -187,6 +193,7 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/test" />
     </ignored-roots>
@@ -204,6 +211,10 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="527" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1578750201577" />
+    <state x="400" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1578843732705">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="400" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1578843732705" />
     <state x="789" y="279" key="FileChooserDialogImpl" timestamp="1578432352319">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
