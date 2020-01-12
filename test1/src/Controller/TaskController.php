@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Subtask;
 use App\Entity\Task;
 use App\Forms\TaskFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -21,9 +22,11 @@ class TaskController extends AbstractController
         {
             $id = $this->getUser()->getId();
             $user = $this->getUser($id);
-            $tasks = $this->getDoctrine()->getRepository(Task::class)->findBy(['user' => $id]);
 
-            return $this->render('Task/index.html.twig', ['tasks' => $tasks, 'user' => $user]);
+            $tasks = $this->getDoctrine()->getRepository(Task::class)->findBy(['user' => $id]);
+            $subtasks = $this->getDoctrine()->getRepository(Subtask::class)->findAll();
+
+            return $this->render('Task/index.html.twig', ['tasks' => $tasks, 'user' => $user, 'subtasks' => $subtasks]);
         }
 
         return $this->redirectToRoute('login');
