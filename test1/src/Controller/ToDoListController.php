@@ -30,7 +30,7 @@ class ToDoListController extends AbstractController
     }
 
     /**
-     * Return data for partial view _navbar
+     * Return user for partial view _navbar
      */
     public function navbar()
     {
