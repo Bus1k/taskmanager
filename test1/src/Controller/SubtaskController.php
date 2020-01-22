@@ -65,4 +65,18 @@ class SubtaskController extends AbstractController
             'subTaskForm' => $form->createView(),
         ]);
     }
+
+    /**
+     * @Route("/deleteSubtask/{id}", name="delete_subtask")
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function deleteSubtask(Subtask $id)
+    {
+            $entityManager = $this->getDoctrine()->getManager();
+
+            $entityManager->remove($id);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('to_do_list');
+    }
 }

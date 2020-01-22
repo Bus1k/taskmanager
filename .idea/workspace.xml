@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c4c2ef28-2981-44f9-8a04-3cc986ecde24" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1/public/css/task_list_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/test1/public/css/task_list_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1/src/Controller/SubtaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/test1/src/Controller/SubtaskController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test1/templates/Task/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/test1/templates/Task/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +148,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zadania" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -183,6 +183,8 @@
       <updated>1578432066049</updated>
       <workItem from="1578432068178" duration="18571000" />
       <workItem from="1578744658185" duration="24484000" />
+      <workItem from="1579195446201" duration="880000" />
+      <workItem from="1579544414498" duration="529000" />
     </task>
     <servers />
   </component>
@@ -216,18 +218,18 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="505" y="279" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1578856372243" />
-    <state x="789" y="279" key="FileChooserDialogImpl" timestamp="1578432352319">
+    <state x="789" y="279" key="FileChooserDialogImpl" timestamp="1579544941435">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="789" y="279" key="FileChooserDialogImpl/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1578432352319" />
+    <state x="789" y="279" key="FileChooserDialogImpl/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1579544941435" />
     <state x="781" y="163" key="SettingsEditor" timestamp="1578435227373">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="781" y="163" key="SettingsEditor/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1578435227373" />
-    <state x="-1319" y="37" width="1243" height="1024" key="dock-window-1" timestamp="1578859703507">
+    <state x="-1319" y="37" width="1243" height="1024" key="dock-window-1" timestamp="1579544926678">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1319" y="37" width="1243" height="1024" key="dock-window-1/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1578859703507" />
+    <state x="-1319" y="37" width="1243" height="1024" key="dock-window-1/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1579544926678" />
     <state x="852" y="255" key="ftp.server.browser" timestamp="1578432781202">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
